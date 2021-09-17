@@ -1,72 +1,82 @@
 package modulo1.Pratica.Exercicio;
-
-import javax.print.attribute.standard.NumberOfDocuments;
 import java.util.Scanner;
 
 public class Exercicio4_while {
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("-------------------Cadastro Cliente--------------------");
-        System.out.println("---------------------Bem vindo-------------------------");
-        System.out.println("Escolha uma opção: \n 1-Cadastrar Cliente \n 2-Listar Clientes \n 3-Sair");
+        System.out.println("=============================CADASTRO DEV CAP===================================");
+        System.out.println("------------Bem vindo ao cadastro de desenvolvedores da Capgemini----------------");
+        System.out.println("Escolha uma opção: \n 1-Cadastrar Desenvolvedor \n 2-Cadastrar Linguagem \n 3-Sair");
         int opcao = sc.nextInt();
 
         switch(opcao){
             case 1:
+                String nome = "";
                 boolean validacaoN = true;
                 boolean validacaoS = true ;
                 boolean validacaoR = true ;
-                boolean validacaoC = true ;
 
                 do{
-                    System.out.print("Informe o nome do cliente:");
-                    String nome = sc.next();
+                    System.out.print("Informe o nome Desenvolvedor:");
+                    nome = sc.next();
                     if(nome.length() < 3){
                         System.out.println("O nome cadastrado deve ter no mínimo três caracteres");
+                        System.out.println("Digite novamente\n");
                     }else{
                         validacaoN = false;
                     }
                 }while(validacaoN);
 
-
+                String sobrenome = "";
 
                 do{
-                    System.out.print("Informe o sobrenome do cliente:");
-                    String nome = sc.next();
-                    if(nome.length() < 3){
+                    System.out.print("Informe o sobrenome do Desenvolvedor:");
+                    sobrenome = sc.next();
+                    if(sobrenome.length() < 3){
                         System.out.println("O sobrenome cadastrado deve ter no mínimo três caracteres");
+                        System.out.println("Digite novamente \n");
                     }else{
                         validacaoS = false;
                     }
                 }while(validacaoS);
 
+                int idade = 0;
 
                 do{
-                    System.out.print("Informe o RG do cliente:");
-                    String nome = sc.next();
-                    if(nome.length() < 4){
-                        System.out.println("O RG cadastrado deve ter no mínimo quatro caracteres");
+                    System.out.print("Informe a idade do Desenvolvedor:");
+                    idade = sc.nextInt();
+                    if(idade < 0){
+                        System.out.println("A idade cadastrada deve ser superior a zero");
+                        System.out.println("Digite novamente \n");
                     }else{
                         validacaoR = false;
                     }
                 }while(validacaoR);
 
+                String nivel = "";
+                System.out.print("Informe Nível de Senioridade:");
+                nivel = sc.next();
 
-                do{
-                    System.out.print("Informe o CPF do cliente:");
-                    String nome = sc.next();
-                    if(nome.length() < 11){
-                        System.out.println("O CPF cadastrado deve ter no mínimo onze caracteres");
-                    }else{
-                        validacaoC = false;
-                    }
-                }while(validacaoC);
-                System.out.println("O cliente foi cadastrado com sucesso!");
+
+                System.out.println("------------Cadastrado realizado com sucesso!----------------");
+                System.out.printf("Desenvolvedor: %s %s | Idade: %d | Nível de Senioridade: %s", nome, sobrenome, idade,nivel);
             break;
 
             case 2:
-                System.out.println("Listagem de clientes");
+                String linguagem = " ";
+                System.out.println("Informe o nome da linguagem de programção:");
+                linguagem = sc.next();
+
+                String desc = " ";
+                System.out.println("Informe a descrição:");
+                desc = sc.next();
+
+                String ap = " ";
+                System.out.println("Informe a aplicação:");
+                ap = sc.next();
+
+                System.out.println("-------------Linguagem Cadastrada-----------------");
             break;
 
             case 3:
