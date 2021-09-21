@@ -9,7 +9,7 @@ public class Pratica6_investimento_for {
         Scanner sc = new Scanner(System.in);
         System.out.println("Rendimento por mês do investimento de R$5.000,00 no período de 24 mêses");
         double investimento = 5000;
-        double taxa = 0.2;
+        double taxa = 0.02;
         double totalMes = 0;
 
         for (int meses = 1; meses <= 24; meses++){
