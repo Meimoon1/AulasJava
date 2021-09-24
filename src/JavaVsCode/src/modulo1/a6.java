@@ -1,3 +1,4 @@
+package modulo1;
 public class a6 {
     public static void main(String[] args){
         boolean executa = false;
