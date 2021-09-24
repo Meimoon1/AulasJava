@@ -22,8 +22,8 @@ public class a5 {
         int n2 = sc.nextInt();
         System.out.println("Foi lido 5: "+n2);
 
-        double sal1 = Double.parseDouble(sc.nextLine());
-        float sal2 = Float.parseFloat(sc.nextLine());
+        //double sal1 = Double.parseDouble(sc.nextLine());
+        //float sal2 = Float.parseFloat(sc.nextLine());
 
 
         sc.close();

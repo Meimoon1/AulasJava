@@ -6,8 +6,8 @@ public class a2 {
         String nome = "Melissa";
         System.out.println(nome);
 
-        String nome1 = "Melissa";
-        String msg = "OLÁAAAAAA";
+        //String nome1 = "Melissa";
+        //String msg = "OLÁAAAAAA";
         char l1 = 'b';
         char l2 = 'a';
         char lq = 74;
