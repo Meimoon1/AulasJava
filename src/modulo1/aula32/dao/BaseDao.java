@@ -2,7 +2,7 @@ package dao;
 import java.io.IOException;
 import java.io.FileWriter;
 
-public abstract class BaseDao<T> {
+public abstract class BaseDao<T> implements IDao<T>{
     protected String filename;
 
     public BaseDao(String filename){
