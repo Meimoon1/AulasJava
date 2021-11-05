@@ -13,4 +13,12 @@ public class Pessoa extends BaseModel{
             this.sobrenome);
         return retorno;
     }
-}
+
+    public Pessoa(String pessoaString){
+        String[] dados = pessoaString.split(";");
+        this.id = Integer.parseInt(dados[0]);
+        this.nome = dados[1];
+        this.sobrenome = dados[2];
+    }
+
+}   
