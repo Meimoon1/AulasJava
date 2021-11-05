@@ -1,12 +1,8 @@
 package dao;
 import java.io.IOException;
 import java.io.FileWriter;
-import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
 
-import model.Pessoa;
-public class BaseDao<T> {
+public abstract class BaseDao<T> {
     protected String filename;
 
     public BaseDao(String filename){

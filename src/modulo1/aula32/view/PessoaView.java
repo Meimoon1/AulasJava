@@ -3,7 +3,7 @@ package view;
 import controller.PessoaController;
 import model.Pessoa;
 
-public class PessoView {
+public class PessoaView{
     public static void main(String[] args) {
         PessoaController pc = new PessoaController();
         Pessoa p1 = new Pessoa();

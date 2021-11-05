@@ -4,6 +4,10 @@ public class Pessoa extends BaseModel{
     public String nome;
     public String sobrenome;
 
+    public Pessoa(){
+        super();
+    }
+
     @Override
     public String toString() {
         //string format é igual o printf

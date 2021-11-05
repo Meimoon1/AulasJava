@@ -7,9 +7,9 @@ public abstract class BaseController<T> {
    private ArrayList<T> list;
    private BaseDao<T> dao;
 
-   public BaseController(String filename){
+   public BaseController(BaseDao dao){
        this.list = new ArrayList<T>();
-       this.dao = new BaseDao<T>(filename);
+       this.dao = dao;
    }
 
    public void create(T model){
