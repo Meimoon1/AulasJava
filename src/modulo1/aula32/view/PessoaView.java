@@ -9,11 +9,11 @@ public class PessoaView{
         Pessoa p1 = new Pessoa();
 
         p1.id = 1;
-        p1.nome = "Melissa";
-        p1.sobrenome = "Matos";
+        p1.nome = "Manuella";
+        p1.sobrenome = "Silva";
         pc.create(p1);
 
-        for (Pessoa p : pc.read()) {
+        for (Object p : pc.read()) {
            System.out.println(p); 
         }
 

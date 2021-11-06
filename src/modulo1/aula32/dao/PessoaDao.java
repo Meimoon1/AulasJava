@@ -11,8 +11,8 @@ public class PessoaDao extends BaseDao<Pessoa>{
         super("dados/pessoa.csv");
     }
 
-    public ArrayList<Pessoa> list(){
-        ArrayList<Pessoa> pessoas = new ArrayList<Pessoa>();
+    public ArrayList<Object> list(){
+        ArrayList<Object> pessoas = new ArrayList<Object>();
         try {
             Scanner sc = new Scanner(new File(this.filename));
             //esse hasnext line , verifica se tem mas alguma linha pra ler
@@ -26,5 +26,17 @@ public class PessoaDao extends BaseDao<Pessoa>{
             e.printStackTrace();
         }
         return pessoas;
+    }
+
+    @Override
+    public void update(Pessoa model) {
+
+        
+    }
+
+    @Override
+    public void remove(Pessoa model) {
+
+        
     }
 }

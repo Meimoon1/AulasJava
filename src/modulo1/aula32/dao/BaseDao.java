@@ -14,17 +14,11 @@ public abstract class BaseDao<T> implements IDao<T>{
         try {
             FileWriter fw = new FileWriter(filename, true);
             fw.write(model.toString());
+            fw.write("\n");
             fw.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
     //lendo em arquivo de texto e transformar de volta em objeto
-  
-    public void update(){
-        
-    }
-    public void remove(){
-        
-    }
 }

@@ -18,6 +18,7 @@ public abstract class BaseController<T> {
    }
    public ArrayList<T> read(){
         return this.list;
+       
     }
     public void update(T model){
         if(this.list.contains(model)){
