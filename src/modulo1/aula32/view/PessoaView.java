@@ -8,9 +8,9 @@ public class PessoaView{
         PessoaController pc = new PessoaController();
         Pessoa p1 = new Pessoa();
 
-        p1.id = 2;
-        p1.nome = "Manuella";
-        p1.sobrenome = "Silva";
+        p1.id = 6;
+        p1.nome = "Joanne";
+        p1.sobrenome = "Costa";
         pc.create(p1);
 
         for (Object p : pc.read()) {
@@ -19,7 +19,7 @@ public class PessoaView{
 
         pc.delete(p1);
         System.out.println("Deletando");
-        
+
         for (Object p : pc.read()) {
             System.out.println(p); 
          }

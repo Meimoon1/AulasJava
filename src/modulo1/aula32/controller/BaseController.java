@@ -29,5 +29,6 @@ public abstract class BaseController<T> {
     }
     public void delete(T model){
         this.list.remove(model);
+        dao.remove(model);
     }
 }
