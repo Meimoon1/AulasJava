@@ -1,13 +1,14 @@
 package controller;
 import java.util.ArrayList;
+import dao.IDao;
 
-import dao.BaseDao;
+
 
 public abstract class BaseController<T> {
    private ArrayList<T> list;
-   private BaseDao<T> dao;
+   private IDao<T> dao;
 
-   public BaseController(BaseDao dao){
+   public BaseController(IDao<T> dao){
        this.list = new ArrayList<T>();
        this.dao = dao;
    }

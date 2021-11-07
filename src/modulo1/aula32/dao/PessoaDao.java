@@ -27,7 +27,6 @@ public class PessoaDao extends BaseDao<Pessoa>{
         }
         return pessoas;
     }
-
     @Override
     public void update(Pessoa model) {
 
@@ -39,4 +38,5 @@ public class PessoaDao extends BaseDao<Pessoa>{
 
         
     }
+  
 }

@@ -1,8 +1,16 @@
 package dao;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import model.BaseModel;
+import model.Pessoa;
+
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 
-public abstract class BaseDao<T> implements IDao<T>{
+public abstract class BaseDao<T extends BaseModel> implements IDao<T>{
     protected String filename;
 
     public BaseDao(String filename){
@@ -21,4 +29,33 @@ public abstract class BaseDao<T> implements IDao<T>{
         }
     }
     //lendo em arquivo de texto e transformar de volta em objeto
+    public void update(T model){
+
+    }
+
+
+    public void remove(T model){
+        try {
+            ArrayList<String> listLinhas = new ArrayList<String>();
+            Scanner sc = new Scanner(new File(this.filename));
+            while(sc.hasNextLine()){
+               String linha = sc.nextLine();
+              int id = Integer.parseInt(linha.split(";")[0]);
+
+              if(id != model.id){
+                listLinhas.add(linha);
+              }
+               
+            }
+            FileWriter fw = new FileWriter(filename);
+            for (String l : listLinhas) {
+               fw.write(l); 
+            }
+            fw.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
 }
