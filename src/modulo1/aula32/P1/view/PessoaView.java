@@ -18,11 +18,22 @@ public class PessoaView{
         }
 
         pc.delete(p1);
-        System.out.println("Deletando");
+        System.err.println("Deletando");
 
         for (Object p : pc.read()) {
             System.out.println(p); 
          }
+
+         p1.id = 4;
+         p1.nome = "Barbie";
+         p1.sobrenome = "Girl";
+         pc.update(p1);
+         
+         System.err.println("Alterado");
+         for (Object p : pc.read()) {
+            System.out.println(p); 
+         }
+
 
     }
 }

@@ -27,15 +27,15 @@ public abstract class BaseDao<T extends BaseModel> implements IDao<T>{
     }
     //lendo em arquivo de texto e transformar de volta em objeto
     public void update(T model){
-
+        updateOrRemove(model, true);
     }
 
 
     public void remove(T model){
-        updateOrRemove(model);
+        updateOrRemove(model, false);
     }
 
-    private void updateOrRemove(T model) {
+    private void updateOrRemove(T model, boolean update) {
         try {
             ArrayList<String> listLinhas = new ArrayList<String>();
             Scanner sc = new Scanner(new File(this.filename));
@@ -43,9 +43,15 @@ public abstract class BaseDao<T extends BaseModel> implements IDao<T>{
                 String linha = sc.nextLine();
                 int id = Integer.parseInt(linha.split(";")[0]);
 
-              if(id != model.id){
-                listLinhas.add(linha);
-              }
+            //alterar
+              if(id == model.id){
+                  if(update){
+                    listLinhas.add(model.toString());
+                  }
+
+                }else{
+                    listLinhas.add(linha);
+                }
                
             }
             FileWriter fw = new FileWriter(filename);
