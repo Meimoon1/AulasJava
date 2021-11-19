@@ -9,7 +9,7 @@ public class View1{
 
     public static void main(String[] args) {
         try {
-            int idDeletado = 26;
+            int idDeletado = 9;
 
             Connection conn = new ConnectionFactory().getConnection();
             
